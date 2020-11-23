@@ -14,11 +14,12 @@ class CreatePenggajiansTable extends Migration
     public function up()
     {
         Schema::create('penggajians', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_pegawai');
+            $table->id();
+            $table->unsignedBigInteger('id_pegawai');
+            $table->foreign('id_pegawai')->references('id')->on('pegawais');
             $table->integer('jam_kerja');
             $table->integer('gaji');
-            $table->string('status');
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

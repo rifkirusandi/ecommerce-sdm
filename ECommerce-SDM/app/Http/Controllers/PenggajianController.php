@@ -22,16 +22,22 @@ class PenggajianController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(request $request)
+    public function create(Request $request)
     {
         $penggajian = new Penggajian;
-        $penggajian->id_pegawai = $request->$id_pegawai;
-        $penggajian->jam_kerja = $request->$jam_kerja;
-        $penggajian->gaji = $request->$gaji;
-        $penggajian->status = $request->$status;
+        $penggajian->id_pegawai = $request->input('id_pegawai');
+        $penggajian->jam_kerja = $request->input('jam_kerja');
+        $penggajian->gaji = $request->input('gaji');
+        $penggajian->status = $request->input('status');
+        $penggajian->created_at = date('Y-m-d H:i:s');
+  		  $penggajian->updated_at = date('Y-m-d H:i:s');
         $penggajian->save();
 
-        return "Data Berhasil Masuk";
+        return response([
+          'status' => 'OK',
+          'message' => 'Data berhasil ditambahkan.',
+          'data' => $penggajian
+        ], 200);
     }
 
     /**
@@ -54,7 +60,7 @@ class PenggajianController extends Controller
     public function show($id)
     {
         $data = \App\Penggajian::where('id',$id)->get();
-    
+
         if(count($data) > 0){ //mengecek apakah data kosong atau tidak
             $res['message'] = "Success!";
             $res['values'] = $data;

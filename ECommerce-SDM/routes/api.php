@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('penggajian', 'PenggajianController@index');
+Route::get('/penggajian/{id}', 'PenggajianController@show');
+Route::post('penggajian', 'PenggajianController@create');
+Route::put('/penggajian/{id}', 'PenggajianController@update');
+Route::delete('/penggajian/{id}', 'PenggajianController@delete');

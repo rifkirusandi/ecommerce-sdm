@@ -8,6 +8,7 @@ use App\Pegawai;
 
 class PegawaiController extends Controller
 {
+  //Menampilkan semua data pegawai
     public function getAllPegawai(){
       return response()->json(Pegawai::all(), 200);
     }

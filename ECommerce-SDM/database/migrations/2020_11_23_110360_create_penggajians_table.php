@@ -20,6 +20,7 @@ class CreatePenggajiansTable extends Migration
             $table->integer('jam_kerja');
             $table->integer('gaji');
             $table->string('status')->nullable();
+            $table->date('tanggal');
             $table->timestamps();
         });
     }

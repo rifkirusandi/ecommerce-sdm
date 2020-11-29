@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Penggajian;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class PenggajianController extends Controller
@@ -26,9 +27,22 @@ class PenggajianController extends Controller
     {
         $penggajian = new Penggajian;
         $penggajian->id_pegawai = $request->input('id_pegawai');
-        $penggajian->jam_kerja = $request->input('jam_kerja');
-        $penggajian->gaji = $request->input('gaji');
+
+        $jabatan = DB::table('pegawais')->where('id', $penggajian->id_pegawai)->select('jabatan')->get();
+
+        $total = $penggajian->jam_kerja = $request->input('jam_kerja');
+
+        foreach ($jabatan as $item) {
+          if ($item -> jabatan == 'Manager') {
+            $gaji = $total*200000;
+          }else{
+            $gaji = $total*100000;
+          }
+        }
+
+        $penggajian->gaji = $gaji;
         $penggajian->status = $request->input('status');
+        $penggajian->tanggal = date('Y-m-d H:i:s');
         $penggajian->created_at = date('Y-m-d H:i:s');
   		  $penggajian->updated_at = date('Y-m-d H:i:s');
         $penggajian->save();

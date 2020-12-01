@@ -38,3 +38,7 @@ Route::delete('/penggajian/{id}', 'PenggajianController@delete');
 Route::get('/pegawai', 'PegawaiController@getAllPegawai');
 Route::get('/pegawai/{id}', 'PegawaiController@getPegawai');
 Route::post('/pegawai', 'PegawaiController@insertPegawai');
+
+//-------------------------------------------------------------------//
+
+Route::post('/absensi', 'AbsensiController@insertAbsensi');

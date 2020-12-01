@@ -17,10 +17,10 @@ class CreateAbsensiTable extends Migration
           $table->id();
           $table->unsignedBigInteger('id_pegawai');
           $table->foreign('id_pegawai')->references('id')->on('pegawais');
-          $table->integer('jam_masuk');
-          $table->integer('jam_keluar');
-          $table->integer('jam_lembur');
-          $table->string('keterangan');
+          $table->date('jam_masuk');
+          $table->date('jam_keluar');
+          $table->integer('jam_kerja');
+          $table->date('tanggal');
           $table->timestamps();
         });
     }

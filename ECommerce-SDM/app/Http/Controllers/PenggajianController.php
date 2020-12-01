@@ -30,6 +30,7 @@ class PenggajianController extends Controller
 
         $jabatan = DB::table('pegawais')->where('id', $penggajian->id_pegawai)->select('jabatan')->get();
 
+        //jam_kerja
         $total = $penggajian->jam_kerja = $request->input('jam_kerja');
 
         foreach ($jabatan as $item) {

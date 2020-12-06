@@ -9,25 +9,14 @@ use Carbon\Carbon;
 
 class AbsensiController extends Controller
 {
-  public function getAbsensi($id){
-    $id_pegawai = Absensi::find($id);
-
-    if ($id_pegawai == null) {
-      return response([
-        'status' => false,
-        'message' => 'Data tidak ditemukan.'
-      ], 404);
-    }else{
-      return response([
-        'data' => $id_pegawai
-      ], 200);
-    }
+  public function getAbsensi(){
+    return response()->json(Absensi::all(), 200);
   }
 
   public function insertAbsensi(Request $request){
     $absensi = new Absensi;
     $absensi->id_pegawai = $request->input('id_pegawai');
-    $jam_masuk = $absensi->jam_masuk = date('Y-m-d H:i:s');
+    $jam_masuk = $absensi->jam_masuk = $request->input('jam_masuk');
     $jam_keluar = $absensi->jam_keluar = $request->input('jam_keluar');
 
     $startTime = Carbon::parse($jam_masuk);
@@ -41,7 +30,7 @@ class AbsensiController extends Controller
 
     return response([
       'status' => 'OK',
-      'message' => 'Pegawai ditambahkan',
+      'message' => 'Absensi ditambahkan',
       'data' => $absensi
     ], 200);
   }

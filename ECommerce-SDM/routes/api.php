@@ -41,4 +41,5 @@ Route::post('/pegawai', 'PegawaiController@insertPegawai');
 
 //-------------------------------------------------------------------//
 
+Route::get('/absensi', 'AbsensiController@getAbsensi');
 Route::post('/absensi', 'AbsensiController@insertAbsensi');

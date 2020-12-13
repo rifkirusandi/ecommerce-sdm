@@ -39,7 +39,11 @@ class PegawaiController extends Controller
 		  $pegawai->updated_at = date('Y-m-d H:i:s');
       $pegawai->save();
       
-      return view('pegawai');
+      return response([
+        'status' => 'OK',
+        'message' => 'Pegawai ditambahkan',
+        'data' => $pegawai
+      ], 200)->view('pegawai');
     }
 
     public function list(){

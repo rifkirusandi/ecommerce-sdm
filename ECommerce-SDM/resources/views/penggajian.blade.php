@@ -68,9 +68,9 @@
         </style>
     </head>
     <body>
-        <div class="cont-1">
+        <div class="cont-1-penggajian">
           <p class="p1">Data Penggajian</p><hr>
-          <div class="cont-2" onclick="tambah()">
+          <div class="cont-2-penggajian" onclick="tambah()">
             + Tambah Data
           </div><br>
                 <div class="links">

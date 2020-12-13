@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
   </head>
   <body>
-    <div class="cont-1">
-      Tambah Absensi
+    <div class="cont-1-absensi">
+      <p class="p1">Tambah Absensi</p>
       <div class="card-body">
-        <form class="" action="http://divisi-sdm.herokuapp.com/api/absensi" method="post"><br><br>
+        <form class="" action="http://divisi-sdm.herokuapp.com/api/absensi" method="post"><hr><br>
           <div class="form-group row">
               <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ID Pegawai') }}</label>
 

@@ -32,6 +32,29 @@ body{
   display: inline-block;
 }
 
+.card-body4{
+  margin-top: 45px;
+  margin-right: 45px;
+  width: 30%;
+  font-size: 25px;
+  min-height: 300px;
+  background-color: #2e86de;
+  border-radius: 30px;
+  float: inherit;
+  display: inline-block;
+}
+
+.card-body5{
+  margin-top: 20px;
+  width: 30%;
+  font-size: 25px;
+  min-height: 300px;
+  background-color: #ee5253;
+  border-radius: 30px;
+  float: inherit;
+  display: inline-block;
+}
+
 .img{
   width: 180px;
 }
@@ -54,6 +77,7 @@ thead{
   height: auto;
   border: solid black 1px;
   border-radius: 30px;
+  color: #F2994A;
 }
 
 .cont-2{
@@ -63,6 +87,61 @@ thead{
   height: 35px;
   text-align: center;
   border: solid #F2994A 3px;
+  font-weight: bold;
+  margin-left: 185px;
+}
+
+.cont-1-penggajian{
+  background-color: #ffffff;
+  margin: auto;
+  text-align: center;
+  width: 70%;
+  height: auto;
+  border: solid black 1px;
+  border-radius: 30px;
+  color: #E09DFF;
+}
+
+.cont-1-absensi{
+  background-color: #ffffff;
+  margin: auto;
+  text-align: center;
+  width: 70%;
+  height: auto;
+  border: solid black 1px;
+  border-radius: 30px;
+  color: #10ac84;
+}
+
+.cont-1-finance{
+  background-color: #ffffff;
+  margin: auto;
+  text-align: center;
+  width: 70%;
+  height: auto;
+  border: solid black 1px;
+  border-radius: 30px;
+  color: #2e86de;
+}
+
+.cont-1-sales{
+  background-color: #ffffff;
+  margin: auto;
+  text-align: center;
+  width: 70%;
+  height: auto;
+  border: solid black 1px;
+  border-radius: 30px;
+  color: #ee5253;
+}
+
+.cont-2-penggajian{
+  color: #E09DFF;
+  border-radius: 10px;
+  width: 160px;
+  height: 35px;
+  text-align: center;
+  border: solid #E09DFF 3px;
   font-weight: bold;
   margin-left: 185px;
 }
@@ -81,4 +160,9 @@ hr{
 
 .button-tambah{
   margin-left: 512px;
+}
+
+.tambah-penggajian{
+  margin-top: 10px;
+  font-size: 40px;
 }

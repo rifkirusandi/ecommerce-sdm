@@ -36,3 +36,9 @@ Route::get('tambahPenggajian', 'PenggajianController@tambah');
 // Absensi //
 Route::get('absensi', 'AbsensiController@list');
 Route::get('tambahAbsensi', 'AbsensiController@tambah');
+
+// Kas Keluar //
+Route::get('kasKeluar', 'ExternalController@finance');
+
+// Advertisement //
+Route::get('advertisement', 'ExternalController@sales');

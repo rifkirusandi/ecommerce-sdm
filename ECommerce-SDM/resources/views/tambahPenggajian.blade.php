@@ -14,10 +14,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
   </head>
   <body>
-    <div class="cont-1">
-      Tambah Penggajian
+    <div class="cont-1-penggajian">
+      <p class="tambah-penggajian">Tambah Penggajian</p>
       <div class="card-body">
-        <form class="" action="http://divisi-sdm.herokuapp.com/api/penggajian" method="post"><br><br>
+        <form class="" action="http://divisi-sdm.herokuapp.com/api/penggajian" method="post"><hr><br>
+          @csrf
           <div class="form-group row">
               <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ID Pegawai') }}</label>
 

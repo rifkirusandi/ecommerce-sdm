@@ -38,13 +38,7 @@ class PegawaiController extends Controller
       $pegawai->created_at = date('Y-m-d H:i:s');
 		  $pegawai->updated_at = date('Y-m-d H:i:s');
       $pegawai->save();
-      if ($request->ajax()) {
-        return response([
-          'status' => 'OK',
-          'message' => 'Pegawai ditambahkan',
-          'data' => $pegawai
-        ], 200);
-      }
+      
       return view('pegawai');
     }
 

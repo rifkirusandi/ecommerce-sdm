@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Penggajian;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 
 class PenggajianController extends Controller

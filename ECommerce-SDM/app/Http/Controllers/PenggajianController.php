@@ -43,7 +43,7 @@ class PenggajianController extends Controller
         }
 
         $penggajian->gaji = $gaji;
-        $penggajian->status = $request->input('status');
+        $penggajian->status = $request->input('status', 'Menunggu');
         $penggajian->tanggal = date('Y-m-d H:i:s');
         $penggajian->created_at = date('Y-m-d H:i:s');
   		  $penggajian->updated_at = date('Y-m-d H:i:s');

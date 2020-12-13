@@ -74,6 +74,7 @@
 
 <script type="text/javascript">
     function berhasil() {
+      alert("Data berhasil ditambahkan");
       window.location.href = "{{ url('pegawai') }}";
     }
 </script>

@@ -30,6 +30,7 @@ Route::get('pegawai', 'PegawaiController@list');
 Route::get('tambahPegawai', 'PegawaiController@tambah');
 
 // Penggajian //
-
+Route::get('penggajian', 'PenggajianController@list');
+Route::get('tambahPenggajian', 'PenggajianController@tambah');
 
 // Absensi //

@@ -69,9 +69,9 @@
     </head>
     <body>
         <div class="cont-1">
-          <p class="p1">Data Pegawai</p><hr>
+          <p class="p1">Data Penggajian</p><hr>
           <div class="cont-2" onclick="tambah()">
-            + Tambah Pegawai
+            + Tambah Data
           </div><br>
                 <div class="links">
                   <table class="table table-striped">
@@ -105,6 +105,6 @@
 
 <script type="text/javascript">
   function tambah(){
-    window.location.href = "{{ url('tambahPegawai') }}";
+    window.location.href = "{{ url('tambahPenggajian') }}";
   }
 </script>

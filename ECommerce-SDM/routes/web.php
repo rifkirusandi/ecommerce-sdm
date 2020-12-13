@@ -34,3 +34,5 @@ Route::get('penggajian', 'PenggajianController@list');
 Route::get('tambahPenggajian', 'PenggajianController@tambah');
 
 // Absensi //
+Route::get('absensi', 'AbsensiController@list');
+Route::get('tambahAbsensi', 'AbsensiController@tambah');

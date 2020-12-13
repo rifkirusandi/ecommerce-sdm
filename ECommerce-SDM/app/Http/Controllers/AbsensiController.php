@@ -35,4 +35,14 @@ class AbsensiController extends Controller
     ], 200);
   }
 
+  public function list(){
+      $data = Http::get('http://divisi-sdm.herokuapp.com/api/absensi');
+      $data = json_decode($data, true);
+      return view('absensi', ['data'=>$data]);
+  }
+
+  public function tambah(){
+      return view('tambahAbsensi');
+  }
+
 }

@@ -77,6 +77,7 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
+                        <td scope="col">ID Pegawai</td>
                         <td scope="col">Nama</td>
                         <td scope="col">Umur</td>
                         <td scope="col">Alamat</td>
@@ -87,6 +88,7 @@
                     <tbody class="tbody">
                       @foreach ($data as $item)
                       <tr>
+                        <td><?php echo $item['id'] ?></td>
                         <td><?php echo $item['nama'] ?></td>
                         <td><?php echo $item['umur'] ?></td>
                         <td><?php echo $item['alamat'] ?></td>

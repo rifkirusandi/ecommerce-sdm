@@ -60,10 +60,10 @@
   }
 
   function datapenggajian(){
-    window.location.href = "lamannya";
+    window.location.href = "{{ url('penggajian') }}";
   }
 
   function dataabsensi(){
-    window.location.href = "lamannya";
+    window.location.href = "{{ url('tambahAbsensi') }}";
   }
 </script>

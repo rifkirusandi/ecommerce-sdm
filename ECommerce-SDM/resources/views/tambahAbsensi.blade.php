@@ -15,22 +15,30 @@
   </head>
   <body>
     <div class="cont-1">
-      Tambah Penggajian
+      Tambah Absensi
       <div class="card-body">
-        <form class="" action="http://divisi-sdm.herokuapp.com/api/penggajian" method="post"><br><br>
+        <form class="" action="http://divisi-sdm.herokuapp.com/api/absensi" method="post"><br><br>
           <div class="form-group row">
               <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ID Pegawai') }}</label>
 
               <div class="col-md-6">
-                  <input id="name" type="number" class="form-control @error('name') is-invalid @enderror" name="id_pegawai" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                  <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="id_pegawai" value="{{ old('name') }}" required autofocus>
               </div>
           </div>
 
           <div class="form-group row">
-              <label for="umur" class="col-md-4 col-form-label text-md-right">{{ __('Jam Kerja') }}</label>
+              <label for="umur" class="col-md-4 col-form-label text-md-right">{{ __('Jam Masuk') }}</label>
 
               <div class="col-md-6">
-                  <input id="umur" type="number" class="form-control @error('name') is-invalid @enderror" name="jam_kerja" value="{{ old('umur') }}" required autocomplete="umur">
+                  <input id="umur" type="datetime-local" class="form-control @error('name') is-invalid @enderror" name="jam_masuk" value="{{ old('jam_masuk') }}" required>
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <label for="alamat" class="col-md-4 col-form-label text-md-right">{{ __('Jam Keluar') }}</label>
+
+              <div class="col-md-6">
+                  <input id="alamat" type="datetime-local" class="form-control @error('name') is-invalid @enderror" name="jam_keluar" value="{{ old('jam_keluar') }}" required>
               </div>
           </div>
 
@@ -50,6 +58,6 @@
 
 <script type="text/javascript">
     function berhasil() {
-      window.location.href = "{{ url('pegawai') }}";
+      window.location.href = "{{ url('home') }}";
     }
 </script>

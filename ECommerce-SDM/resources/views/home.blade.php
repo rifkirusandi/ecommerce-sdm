@@ -1,23 +1,69 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+        <!-- Fonts -->
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+    </head>
+    <body>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-8">
+                  <div class="card">
+                      <div class="card-header">{{ __('Our Feature') }}</div>
+
+                      <div class="card-body">
+                          @if (session('status'))
+                              <div class="alert alert-success" role="alert">
+                                  {{ session('status') }}
+                              </div>
+                          @endif
+                        <center>
+                          <div class="card-body1" onclick="datapegawai()"><br>
+                            <center>
+                              <img class="img" src="{{ asset('img/group.png') }}" alt="Picture" title="Data Pegawai"><br>
+                              Data Pegawai
+                            </center>
+                          </div>
+
+                          <div class="card-body2" onclick="datapenggajian()"><br>
+                            <center>
+                              <img class="img" src="{{ asset('img/dollar.png') }}" alt="Picture" title="Data Penggajian"><br>
+                              Data Penggajian
+                            </center>
+                          </div>
+
+                          <div class="card-body3" onclick="dataabsensi()"><br>
+                            <center>
+                              <img class="img" src="{{ asset('img/clipboard.png') }}" alt="Picture" title="Data Absensi"><br>
+                              Data Absensi
+                            </center>
+                          </div>
+                        </center>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    @endsection
+  </body>
+</html>
+
+<script type="text/javascript">
+  function datapegawai(){
+    window.location.href = "{{ url('pegawai') }}";
+  }
+
+  function datapenggajian(){
+    window.location.href = "lamannya";
+  }
+
+  function dataabsensi(){
+    window.location.href = "lamannya";
+  }
+</script>

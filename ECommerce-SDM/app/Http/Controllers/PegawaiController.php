@@ -38,11 +38,23 @@ class PegawaiController extends Controller
       $pegawai->created_at = date('Y-m-d H:i:s');
 		  $pegawai->updated_at = date('Y-m-d H:i:s');
       $pegawai->save();
+      if ($request->ajax()) {
+        return response([
+          'status' => 'OK',
+          'message' => 'Pegawai ditambahkan',
+          'data' => $pegawai
+        ], 200);
+      }
+      return view('pegawai');
+    }
 
-      return response([
-        'status' => 'OK',
-        'message' => 'Pegawai ditambahkan',
-        'data' => $pegawai
-      ], 200);
+    public function list(){
+        $data = Http::get('http://divisi-sdm.herokuapp.com/api/pegawai');
+        $data = json_decode($data, true);
+        return view('pegawai', ['data'=>$data]);
+    }
+
+    public function tambah(){
+        return view('tambahPegawai');
     }
 }

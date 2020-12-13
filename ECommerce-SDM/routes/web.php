@@ -24,3 +24,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Pegawai //
+Route::get('pegawai', 'PegawaiController@list');
+Route::get('tambahPegawai', 'PegawaiController@tambah');
+
+// Penggajian //
+
+
+// Absensi //

@@ -1211,8 +1211,7 @@ pre code {
   }
 
   .col-md-8 {
-    flex: 0 0 66.6666666667%;
-    max-width: 66.6666666667%;
+      margin: 0 auto;
   }
 
   .col-md-9 {
@@ -4934,10 +4933,11 @@ input[type=button].btn-block {
 }
 
 .card {
+  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  width: 1100px;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
@@ -10902,4 +10902,3 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-

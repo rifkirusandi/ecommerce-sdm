@@ -75,5 +75,6 @@
 <script type="text/javascript">
     function berhasil() {
       alert("Data Telah Ditambahkan");
+      window.location.href = "{{ url('pegawai') }}";
     }
 </script>

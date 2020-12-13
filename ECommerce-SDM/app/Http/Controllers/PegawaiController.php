@@ -38,12 +38,12 @@ class PegawaiController extends Controller
       $pegawai->created_at = date('Y-m-d H:i:s');
 		  $pegawai->updated_at = date('Y-m-d H:i:s');
       $pegawai->save();
-      
+
       return response([
         'status' => 'OK',
         'message' => 'Pegawai ditambahkan',
         'data' => $pegawai
-      ], 200)->view('pegawai');
+      ], 200);
     }
 
     public function list(){

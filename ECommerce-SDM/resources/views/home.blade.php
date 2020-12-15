@@ -70,7 +70,7 @@
 
 <script type="text/javascript">
   function datapegawai(){
-    window.location.href = "{{ url('pegawai') }}";
+    window.location.href = "{{route('listPegawai')}}";
   }
 
   function datapenggajian(){

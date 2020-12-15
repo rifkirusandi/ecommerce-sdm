@@ -61,14 +61,17 @@ class PegawaiController extends Controller
     public function create1(Request $request){
       $client = new Client();
       $url = "http://divisi-sdm.herokuapp.com/api/pegawai";
-      $request = $client->request('POST',$url, [
-        'form_params' => [
-          'nama' => $request->nama,
-          'umur' => $request->umur,
-          'alamat' => $request->alamat,
-          'divisi' => $request->divisi,
-          'jabatan' => $request->jabatan,
-        ]
+      $body = [
+        'nama' => $request->nama,
+        'umur' => $request->umur,
+        'alamat' => $request->alamat,
+        'divisi' => $request->divisi,
+        'jabatan' => $request->jabatan,
+      ];
+
+      $request = $client->post($url, [
+        'headers'   => ['Content-Type' => 'application/json'],
+        'body'      => json_encode($body),
       ]);
 
       $response = $request->send();

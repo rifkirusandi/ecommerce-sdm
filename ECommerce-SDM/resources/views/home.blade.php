@@ -74,15 +74,15 @@
   }
 
   function datapenggajian(){
-    window.location.href = "{{ url('penggajian') }}";
+    window.location.href = "{{ route('listPenggajian') }}";
   }
 
   function dataabsensi(){
-    window.location.href = "{{ url('tambahAbsensi') }}";
+    window.location.href = "{{ route('createAbsensi') }}";
   }
 
   function datafinance(){
-    window.location.href = "{{ url('kasKeluar') }}";
+    window.location.href = "{{ route('inputKasKeluar') }}";
   }
 
   function datasales(){

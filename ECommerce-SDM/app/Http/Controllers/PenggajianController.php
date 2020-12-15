@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Penggajian;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
 
 class PenggajianController extends Controller
@@ -150,5 +152,21 @@ class PenggajianController extends Controller
 
     public function tambah(){
         return view('tambahPenggajian');
+    }
+
+    public function create1(Request $request){
+      $client = new Client();
+      $url = "http://divisi-sdm.herokuapp.com/api/penggajian";
+      $body = [
+        'id_pegawai' => $request->id_pegawai,
+        'jam_kerja' => $request->jam_kerja,
+      ];
+
+      $request = $client->post($url, [
+        'headers'   => ['Content-Type' => 'application/json'],
+        'body'      => json_encode($body),
+      ]);
+
+      return redirect()->route('listPenggajian');
     }
 }

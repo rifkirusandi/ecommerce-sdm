@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Response;
 use App\Absensi;
 use Carbon\Carbon;
 
@@ -43,6 +45,23 @@ class AbsensiController extends Controller
 
   public function tambah(){
       return view('tambahAbsensi');
+  }
+
+  public function create1(Request $request){
+    $client = new Client();
+    $url = "http://divisi-sdm.herokuapp.com/api/absensi";
+    $body = [
+      'id_pegawai' => $request->id_pegawai,
+      'jam_masuk' => $request->jam_masuk,
+      'jam_keluar' => $request->jam_keluar,
+    ];
+
+    $request = $client->post($url, [
+      'headers'   => ['Content-Type' => 'application/json'],
+      'body'      => json_encode($body),
+    ]);
+
+    return redirect()->route('createAbsensi');
   }
 
 }

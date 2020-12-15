@@ -31,15 +31,17 @@ Route::get('tambahPegawai', 'PegawaiController@tambah');
 Route::post('insertPegawai', 'PegawaiController@create1')->name('createPegawai');
 
 // Penggajian //
-Route::get('penggajian', 'PenggajianController@list');
+Route::get('penggajian', 'PenggajianController@list')->name('listPenggajian');
 Route::get('tambahPenggajian', 'PenggajianController@tambah');
+Route::post('insertPenggajian', 'PenggajianController@create1')->name('createPenggajian');
 
 // Absensi //
 Route::get('absensi', 'AbsensiController@list');
-Route::get('tambahAbsensi', 'AbsensiController@tambah');
+Route::get('tambahAbsensi', 'AbsensiController@tambah')->name('createAbsensi');
+Route::post('insertAbsensi', 'AbsensiController@create1')->name('createAbsensi');
 
 // Kas Keluar //
-Route::get('kasKeluar', 'ExternalController@finance');
+Route::get('kasKeluar', 'ExternalController@finance')->name('inputKasKeluar');
 
 // Advertisement //
-Route::get('advertisement', 'ExternalController@sales');
+Route::get('advertisement', 'ExternalController@sales')->name('createAdvert');

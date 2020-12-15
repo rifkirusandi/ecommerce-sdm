@@ -57,7 +57,7 @@ class PegawaiController extends Controller
         return view('tambahPegawai');
     }
 
-    public function create1(){
+    public function create1(Request $request){
       $client = new Client();
       $url = "http://divisi-sdm.herokuapp.com/api/pegawai";
       $myBody = [

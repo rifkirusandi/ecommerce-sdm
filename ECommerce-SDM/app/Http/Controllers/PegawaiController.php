@@ -58,7 +58,7 @@ class PegawaiController extends Controller
     }
 
     public function create1(){
-      $client = new \Guzzle\Http\Client();
+      $client = new Client();
       $url = "http://divisi-sdm.herokuapp.com/api/pegawai";
       $myBody = [
         'nama' => $request->nama,

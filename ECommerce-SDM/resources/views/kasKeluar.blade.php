@@ -18,6 +18,7 @@
       <p class="p1">Input Kas Keluar</p>
       <div class="card-body">
         <form class="" action="{{route('inputKasKeluar')}}" method="post"><hr><br>
+          @csrf
           <div class="form-group row">
               <label for="id_transaksi" class="col-md-4 col-form-label text-md-right">{{ __('ID Transaksi') }}</label>
 

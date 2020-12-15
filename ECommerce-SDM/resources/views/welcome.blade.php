@@ -12,23 +12,32 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-image: url("https://i.postimg.cc/MZ18BRKN/bg.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
-                height: 100vh;
+                height: auto;
                 margin: 0;
             }
 
             .button-auth{
               border: solid #ffbe76 1px;
+              background-color: #f0932b;
               border-radius: 10px;
             }
 
             .button-auth:hover{
-              background-color: #f0932b;
-              color: #ffffff;
+              background-color: #ffffff;
               transition: 0.3s;
+            }
+
+            .button-auth1{
+              background-color: #487eb0;
+              border: solid #487eb0 1px;
+              border-radius: 10px;
+              color: #ffffff;
             }
 
             .full-height {
@@ -72,32 +81,32 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .log-res{
+              margin-right: 1060px;
+              margin-top: 120px;
+              float: left;
+              font-size: 50px;
+            }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="left links">
+                  <div class="log-res">
                     @auth
-                        <a href="{{ url('/home') }}" class="button-auth">Home</a>
+                        <a href="{{ url('/home') }}" class="button-auth" style="text-decoration: none;color: #fbc531;">Home</a>
                     @else
-                        <a href="{{ route('login') }}" class="button-auth">Login</a>
+                        <a href="{{ route('login') }}" class="button-auth" style="text-decoration: none;color: #fbc531;color: #ffffff;">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="button-auth">Register</a>
+                            <a href="{{ route('register') }}" class="button-auth1" style="text-decoration: none;color: #ffffff;">Register</a>
                         @endif
                     @endauth
+                  </div>
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Aplikasi Divisi SDM
-                </div>
-
-                <div class="links">
-                </div>
-            </div>
         </div>
     </body>
 </html>

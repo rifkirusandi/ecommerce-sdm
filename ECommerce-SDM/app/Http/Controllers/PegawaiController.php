@@ -12,7 +12,7 @@ class PegawaiController extends Controller
 {
   //Menampilkan semua data pegawai
     public function getAllPegawai(){
-      return response()->json(Pegawai::all()->paginate(10), 200);
+      return response()->json(Pegawai::all(), 200);
     }
 
     public function getPegawai($id){

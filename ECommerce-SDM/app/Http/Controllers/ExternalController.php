@@ -29,7 +29,7 @@ class ExternalController extends Controller
       return redirect()->route('KasKeluar');
     }
 
-    public function sales(){
+    public function sales(Request $request){
       $client = new Client();
       $url = "https://eai-sales.herokuapp.com/api/advertisement/create";
       $body = [
@@ -46,5 +46,13 @@ class ExternalController extends Controller
       ]);
 
       return redirect()->route('Advert');
+    }
+
+    public function salary(){
+      return view('kasKeluar');
+    }
+
+    public function advert(){
+      return view('advertisement');
     }
 }

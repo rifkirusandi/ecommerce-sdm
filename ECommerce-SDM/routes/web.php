@@ -41,9 +41,9 @@ Route::get('tambahAbsensi', 'AbsensiController@tambah')->name('Absensi');
 Route::post('insertAbsensi', 'AbsensiController@create1')->name('createAbsensi');
 
 // Kas Keluar //
-Route::get('kasKeluar', 'ExternalController@finance')->name('KasKeluar');
+Route::get('kasKeluar', 'ExternalController@salary')->name('KasKeluar');
 Route::post('kasKeluar', 'ExternalController@finance')->name('inputKasKeluar');
 
 // Advertisement //
-Route::get('advertisement', 'ExternalController@sales')->name('Advert');
+Route::get('advertisement', 'ExternalController@advert')->name('Advert');
 Route::post('advertisement', 'ExternalController@sales')->name('createAdvert');

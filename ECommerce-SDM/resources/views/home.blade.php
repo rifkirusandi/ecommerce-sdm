@@ -78,7 +78,7 @@
   }
 
   function dataabsensi(){
-    window.location.href = "{{ route('createAbsensi') }}";
+    window.location.href = "{{ route('Absensi') }}";
   }
 
   function datafinance(){

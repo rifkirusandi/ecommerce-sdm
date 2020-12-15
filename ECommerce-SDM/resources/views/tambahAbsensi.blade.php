@@ -19,6 +19,7 @@
       <div class="card-body">
         <form class="" action="{{route('createAbsensi')}}" method="post"><hr><br>
           <div class="form-group row">
+            @csrf
               <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ID Pegawai') }}</label>
 
               <div class="col-md-6">

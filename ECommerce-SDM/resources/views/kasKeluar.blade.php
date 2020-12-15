@@ -40,7 +40,7 @@
               <label for="jenis" class="col-md-4 col-form-label text-md-right">{{ __('Jenis') }}</label>
 
               <div class="col-md-6">
-                <select name="role" id="role" class="form-control">
+                <select name="jenis" id="jenis" class="form-control">
                   <option value="penggajian">Penggajian</option>
                 </select>
               </div>
@@ -66,7 +66,7 @@
               <label for="divisi" class="col-md-4 col-form-label text-md-right">{{ __('Divisi') }}</label>
 
               <div class="col-md-6">
-                <select name="role" id="role" class="form-control">
+                <select name="divisi" id="divisi" class="form-control">
                   <option value="">Pilih Divisi</option>
                   <option value="sdm">SDM</option>
                   <option value="finance">Finance</option>

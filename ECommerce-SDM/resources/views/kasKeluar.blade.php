@@ -40,7 +40,9 @@
               <label for="jenis" class="col-md-4 col-form-label text-md-right">{{ __('Jenis') }}</label>
 
               <div class="col-md-6">
-                  <input id="jenis" type="text" class="form-control @error('name') is-invalid @enderror" name="jenis" value="{{ old('jenis') }}" required autocomplete="jenis">
+                <select name="role" id="role" class="form-control">
+                  <option value="penggajian">Penggajian</option>
+                </select>
               </div>
           </div>
 
@@ -64,7 +66,13 @@
               <label for="divisi" class="col-md-4 col-form-label text-md-right">{{ __('Divisi') }}</label>
 
               <div class="col-md-6">
-                  <input id="divisi" type="text" class="form-control @error('name') is-invalid @enderror" name="divisi" value="{{ old('divisi') }}" required autocomplete="divisi">
+                <select name="role" id="role" class="form-control">
+                  <option value="">Pilih Divisi</option>
+                  <option value="SDM">SDM</option>
+                  <option value="Finance">Finance</option>
+                  <option value="Sales">Sales</option>
+                  <option value="warehouse">Warehouse</option>
+                </select>
               </div>
           </div>
 

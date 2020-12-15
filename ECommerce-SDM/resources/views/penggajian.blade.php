@@ -90,7 +90,9 @@
                       <tr>
                         <td><?php echo $item['id_pegawai'] ?></td>
                         <td><?php echo $item['jam_kerja'] ?></td>
-                        <td><?php echo $item['gaji'] ?></td>
+                        <td><?php
+                        echo "Rp. ";
+                        echo $item['gaji'] ?></td>
                         <td><?php echo $item['status'] ?></td>
                         <td><?php echo $item['tanggal'] ?></td>
                       </tr>

@@ -20,6 +20,17 @@
                 margin: 0;
             }
 
+            .button-auth{
+              border: solid #ffbe76 1px;
+              border-radius: 10px;
+            }
+
+            .button-auth:hover{
+              background-color: #f0932b;
+              color: #ffffff;
+              transition: 0.3s;
+            }
+
             .full-height {
                 height: 100vh;
             }
@@ -68,12 +79,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" class="button-auth">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}" class="button-auth">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" class="button-auth">Register</a>
                         @endif
                     @endauth
                 </div>
@@ -81,18 +92,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Aplikasi Divisi SDM
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
         </div>

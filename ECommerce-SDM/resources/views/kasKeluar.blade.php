@@ -68,9 +68,9 @@
               <div class="col-md-6">
                 <select name="role" id="role" class="form-control">
                   <option value="">Pilih Divisi</option>
-                  <option value="SDM">SDM</option>
-                  <option value="Finance">Finance</option>
-                  <option value="Sales">Sales</option>
+                  <option value="sdm">SDM</option>
+                  <option value="finance">Finance</option>
+                  <option value="sales">Sales</option>
                   <option value="warehouse">Warehouse</option>
                 </select>
               </div>

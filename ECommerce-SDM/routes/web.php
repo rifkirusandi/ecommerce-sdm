@@ -28,6 +28,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Pegawai //
 Route::get('pegawai', 'PegawaiController@list');
 Route::get('tambahPegawai', 'PegawaiController@tambah');
+Route::post('insertPegawai', 'PegawaiController@create1')->name('createPegawai');
 
 // Penggajian //
 Route::get('penggajian', 'PenggajianController@list');

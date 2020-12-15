@@ -55,4 +55,21 @@ class PegawaiController extends Controller
     public function tambah(){
         return view('tambahPegawai');
     }
+
+    public function create1(){
+      $client = new \Guzzle\Http\Client();
+      $url = "http://divisi-sdm.herokuapp.com/api/pegawai";
+      $myBody = [
+        'nama' => $request->nama,
+        'umur' => $request->umur,
+        'alamat' => $request->alamat,
+        'divisi' => $request->divisi,
+        'jabatan' => $request->jabatan,
+      ];
+
+      $request = $client->post($url, ['body'=>$myBody]);
+      $response = $request->send();
+
+      return view('pegawai');
+    }
 }

@@ -15,12 +15,13 @@
   </head>
   <body>
     <div class="cont-1">
+      <img src="{{ asset('img/left-arrow.png') }}" alt="" class="arrow" onclick="back()">
       <p class="p1">Tambah Pegawai</p>
       <div class="card-body">
         <form class="" action="{{route('createPegawai')}}" method="post"><hr><br>
           @csrf
           <div class="form-group row">
-              <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+              <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nama') }}</label>
 
               <div class="col-md-6">
                   <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="nama" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -76,6 +77,9 @@
 <script type="text/javascript">
     function berhasil() {
       alert("Data berhasil ditambahkan");
-      window.location.href = "{{ url('pegawai') }}";
+    }
+
+    function back() {
+      window.location.href = "{{ route('listPegawai') }}";
     }
 </script>

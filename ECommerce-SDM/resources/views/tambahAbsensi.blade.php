@@ -15,6 +15,7 @@
   </head>
   <body>
     <div class="cont-1-absensi">
+      <img src="{{ asset('img/left-arrow.png') }}" alt="" class="arrow" onclick="back()">
       <p class="p1">Tambah Absensi</p>
       <div class="card-body">
         <form class="" action="{{route('createAbsensi')}}" method="post"><hr><br>
@@ -60,6 +61,9 @@
 <script type="text/javascript">
     function berhasil() {
       alert("Data berhasil ditambahkan");
-      window.location.href = "{{ url('home') }}";
+    }
+
+    function back(){
+      window.location.href = "{{ route('home') }}";
     }
 </script>

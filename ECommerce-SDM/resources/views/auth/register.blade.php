@@ -62,10 +62,16 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Divisi') }}</label>
 
                             <div class="col-md-6">
-                                <input id="role" type="text" class="form-control" name="role" required autocomplete="new-password">
+                                <select name="role" id="role" class="form-control">
+                                  <option value="">Pilih Divisi</option>
+                                  <option value="SDM">SDM</option>
+                                  <option value="Finance">Finance</option>
+                                  <option value="Sales">Sales</option>
+                                  <option value="warehouse">Warehouse</option>
+                                </select>
                             </div>
                         </div>
 

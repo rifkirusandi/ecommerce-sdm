@@ -166,3 +166,10 @@ hr{
   margin-top: 10px;
   font-size: 40px;
 }
+
+.arrow{
+  width: 5%;
+  float: left;
+  margin-top: 1%;
+  padding-left: 10px;
+}

@@ -69,6 +69,7 @@
     </head>
     <body>
         <div class="cont-1">
+          <img src="{{ asset('img/left-arrow.png') }}" alt="" class="arrow" onclick="back()">
           <p class="p1">Data Pegawai</p><hr>
           <div class="cont-2" onclick="tambah()">
             + Tambah Pegawai
@@ -108,5 +109,9 @@
 <script type="text/javascript">
   function tambah(){
     window.location.href = "{{ url('tambahPegawai') }}";
+  }
+
+  function back(){
+    window.location.href = "{{ route('home') }}";
   }
 </script>

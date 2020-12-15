@@ -15,6 +15,7 @@
   </head>
   <body>
     <div class="cont-1-sales">
+      <img src="{{ asset('img/left-arrow.png') }}" alt="" class="arrow" onclick="back()">
       <p class="p1">Create Advertisement</p>
       <div class="card-body">
         <form class="" action="{{route('createAdvert')}}" method="post"><hr><br>
@@ -76,5 +77,9 @@
 <script type="text/javascript">
     function berhasil() {
       alert("Data berhasil ditambahkan");
+    }
+
+    function back(){
+      window.location.href = "{{ route('home') }}";
     }
 </script>

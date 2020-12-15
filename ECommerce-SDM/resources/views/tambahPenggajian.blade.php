@@ -15,6 +15,7 @@
   </head>
   <body>
     <div class="cont-1-penggajian">
+      <img src="{{ asset('img/left-arrow.png') }}" alt="" class="arrow" onclick="back()">
       <p class="tambah-penggajian">Tambah Penggajian</p>
       <div class="card-body">
         <form class="" action="{{route('createPenggajian')}}" method="post"><hr><br>
@@ -52,6 +53,9 @@
 <script type="text/javascript">
     function berhasil() {
       alert("Data berhasil ditambahkan");
-      window.location.href = "{{ url('pegawai') }}";
+    }
+
+    function back(){
+      window.location.href = "{{ route('listPenggajian') }}";
     }
 </script>

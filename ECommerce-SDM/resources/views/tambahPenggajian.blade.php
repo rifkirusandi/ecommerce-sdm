@@ -17,7 +17,7 @@
     <div class="cont-1-penggajian">
       <p class="tambah-penggajian">Tambah Penggajian</p>
       <div class="card-body">
-        <form class="" action="http://divisi-sdm.herokuapp.com/api/penggajian" method="post"><hr><br>
+        <form class="" action="{{route('createPenggajian')}}" method="post"><hr><br>
           @csrf
           <div class="form-group row">
               <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ID Pegawai') }}</label>

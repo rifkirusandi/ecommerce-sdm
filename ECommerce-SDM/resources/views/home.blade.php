@@ -82,10 +82,10 @@
   }
 
   function datafinance(){
-    window.location.href = "{{ route('inputKasKeluar') }}";
+    window.location.href = "{{ route('KasKeluar') }}";
   }
 
   function datasales(){
-    window.location.href = "{{ url('advertisement') }}";
+    window.location.href = "{{ route('Advert') }}";
   }
 </script>

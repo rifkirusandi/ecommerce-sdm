@@ -17,7 +17,7 @@
     <div class="cont-1-sales">
       <p class="p1">Create Advertisement</p>
       <div class="card-body">
-        <form class="" action="https://eai-sales.herokuapp.com/api/advertisement/create" method="post"><hr><br>
+        <form class="" action="{{route('createAdvert')}}" method="post"><hr><br>
           @csrf
           <div class="form-group row">
               <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Judul') }}</label>

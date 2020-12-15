@@ -26,7 +26,7 @@ class ExternalController extends Controller
         'body'      => json_encode($body),
       ]);
 
-      return redirect()->route('inputKasKeluar');
+      return redirect()->route('KasKeluar');
     }
 
     public function sales(){
@@ -45,6 +45,6 @@ class ExternalController extends Controller
         'body'      => json_encode($body),
       ]);
 
-      return redirect()->route('createAdvert');
+      return redirect()->route('Advert');
     }
 }

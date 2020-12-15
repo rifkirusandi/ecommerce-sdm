@@ -61,7 +61,7 @@ class AbsensiController extends Controller
       'body'      => json_encode($body),
     ]);
 
-    return redirect()->route('createAbsensi');
+    return redirect()->route('Absensi');
   }
 
 }

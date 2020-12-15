@@ -37,11 +37,13 @@ Route::post('insertPenggajian', 'PenggajianController@create1')->name('createPen
 
 // Absensi //
 Route::get('absensi', 'AbsensiController@list');
-Route::get('tambahAbsensi', 'AbsensiController@tambah')->name('createAbsensi');
+Route::get('tambahAbsensi', 'AbsensiController@tambah')->name('Absensi');
 Route::post('insertAbsensi', 'AbsensiController@create1')->name('createAbsensi');
 
 // Kas Keluar //
-Route::get('kasKeluar', 'ExternalController@finance')->name('inputKasKeluar');
+Route::get('kasKeluar', 'ExternalController@finance')->name('KasKeluar');
+Route::post('kasKeluar', 'ExternalController@finance')->name('inputKasKeluar');
 
 // Advertisement //
-Route::get('advertisement', 'ExternalController@sales')->name('createAdvert');
+Route::get('advertisement', 'ExternalController@sales')->name('Advert');
+Route::post('advertisement', 'ExternalController@sales')->name('createAdvert');

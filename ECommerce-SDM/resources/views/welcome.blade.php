@@ -78,8 +78,7 @@
             }
 
             .log-res{
-              margin-right: 1060px;
-              margin-top: 120px;
+              margin: 40% 0% 0% -169%;
               float: left;
               font-size: 50px;
             }
@@ -91,7 +90,7 @@
                 <div class="left links">
                   <div class="log-res">
                     @auth
-                        <a href="{{ url('/home') }}" class="button-auth" style="text-decoration: none;color: #fbc531;">Home</a>
+                        <a href="{{ url('/home') }}" class="button-auth" style="text-decoration: none;color: #fbc531;color: #ffffff;margin-right: 180px;">Home</a>
                     @else
                         <a href="{{ route('login') }}" class="button-auth" style="text-decoration: none;color: #fbc531;color: #ffffff;">Login</a>
 

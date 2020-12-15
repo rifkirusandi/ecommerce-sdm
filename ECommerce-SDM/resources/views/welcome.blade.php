@@ -28,11 +28,6 @@
               border-radius: 10px;
             }
 
-            .button-auth:hover{
-              background-color: #ffffff;
-              transition: 0.3s;
-            }
-
             .button-auth1{
               background-color: #487eb0;
               border: solid #487eb0 1px;

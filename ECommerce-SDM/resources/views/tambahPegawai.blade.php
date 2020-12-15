@@ -48,11 +48,11 @@
               <label for="divisi" class="col-md-4 col-form-label text-md-right">{{ __('Divisi') }}</label>
 
               <div class="col-md-6">
-                <select name="role" id="role" class="form-control">
+                <select name="divisi" id="divisi" class="form-control">
                   <option value="">Pilih Divisi</option>
-                  <option value="SDM">SDM</option>
-                  <option value="Finance">Finance</option>
-                  <option value="Sales">Sales</option>
+                  <option value="sdm">SDM</option>
+                  <option value="finance">Finance</option>
+                  <option value="sales">Sales</option>
                   <option value="warehouse">Warehouse</option>
                 </select>
               </div>
@@ -62,7 +62,7 @@
               <label for="jabatan" class="col-md-4 col-form-label text-md-right">{{ __('Jabatan') }}</label>
 
               <div class="col-md-6">
-                <select name="role" id="role" class="form-control">
+                <select name="jabatan" id="jabatan" class="form-control">
                   <option value="">Pilih Jabatan</option>
                   <option value="Manager">Manager</option>
                   <option value="Karyawan">Karyawan</option>

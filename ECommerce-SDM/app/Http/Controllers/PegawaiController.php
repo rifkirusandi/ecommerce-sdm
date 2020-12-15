@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Response;
 use App\Pegawai;
 
 class PegawaiController extends Controller
@@ -69,7 +70,7 @@ class PegawaiController extends Controller
           'jabatan' => $request->jabatan,
         ]
       ]);
-      
+
       $response = $request->send();
 
       return view('pegawai');

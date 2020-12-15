@@ -74,6 +74,6 @@ class PegawaiController extends Controller
         'body'      => json_encode($body),
       ]);
 
-      return view('pegawai');
+      return redirect()->route('pegawai');
     }
 }

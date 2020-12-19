@@ -43,12 +43,12 @@ class PenggajianController extends Controller
             $gaji = $total*100000;
           }
         }
-        $penggajian->status = $request->input('keterangan');
         $penggajian->gaji = $gaji;
         $penggajian->status = $request->input('status', 'Menunggu');
         $penggajian->tanggal = date('Y-m-d H:i:s');
         $penggajian->created_at = date('Y-m-d H:i:s');
   		  $penggajian->updated_at = date('Y-m-d H:i:s');
+        $penggajian->status = $request->input('keterangan');
         $penggajian->save();
 
         return response([

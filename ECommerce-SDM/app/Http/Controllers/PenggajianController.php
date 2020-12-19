@@ -110,15 +110,9 @@ class PenggajianController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $id_pegawai = $request->id_pegawai;
-        $jam_kerja = $request->jam_kerja;
-        $gaji = $request->gaji;
         $status = $request->status;
 
         $penggajian = Penggajian::find($id);
-        $penggajian->id_pegawai = $id_pegawai;
-        $penggajian->jam_kerja = $jam_kerja;
-        $penggajian->gaji = $gaji;
         $penggajian->status = $status;
 
         $penggajian->save();

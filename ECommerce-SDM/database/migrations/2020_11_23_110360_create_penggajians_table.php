@@ -18,7 +18,6 @@ class CreatePenggajiansTable extends Migration
             $table->unsignedBigInteger('id_pegawai');
             $table->foreign('id_pegawai')->references('id')->on('pegawais');
             $table->integer('jam_kerja');
-            $table->string('keterangan');
             $table->integer('gaji');
             $table->string('status')->nullable();
             $table->date('tanggal');

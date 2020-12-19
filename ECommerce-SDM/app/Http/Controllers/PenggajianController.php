@@ -117,7 +117,11 @@ class PenggajianController extends Controller
 
         $penggajian->save();
 
-        return "Data berhasil di update";
+        return response([
+          'status' => 'OK',
+          'message' => 'Data berhasil diupdate.',
+          'data' => $penggajian
+        ], 200);
     }
 
     public function delete($id) {

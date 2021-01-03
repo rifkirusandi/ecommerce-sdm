@@ -43,4 +43,23 @@ class UserController extends Controller
       $user = Auth::user();
       return response()->json(['success' => $user], 200);
   }
+
+  public function getAllUser(){
+    return User::all();
+  }
+
+  public function getUser($id){
+    $id_user = User::find($id);
+
+    if ($id_user == null) {
+      return response([
+        'status' => false,
+        'message' => 'Data tidak ditemukan.'
+      ], 404);
+    }else{
+      return response([
+        'data' => $id_user
+      ], 200);
+    }
+  }
 }

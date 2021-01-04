@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class ExternalController extends Controller
 {
@@ -13,7 +15,7 @@ class ExternalController extends Controller
       $url = "https://finance-ecommerce.herokuapp.com/api/kas/keluar";
       $body = [
         'transaksi_id' => $request->transaksi_id,
-        'pegawai_id' => $request->pegawai_id,
+        'pegawai_id' =>  auth::User()->id,
         'jenis' => $request->jenis,
         'nama' => $request->nama,
         'keterangan' => $request->keterangan,

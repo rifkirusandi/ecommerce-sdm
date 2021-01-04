@@ -29,14 +29,6 @@
           </div>
 
           <div class="form-group row">
-              <label for="pegawai_id" class="col-md-4 col-form-label text-md-right">{{ __('ID Pegawai') }}</label>
-
-              <div class="col-md-6">
-                  <input id="pegawai_id" type="number" class="form-control @error('name') is-invalid @enderror" name="pegawai_id" value="{{ old('pegawai_id') }}" required>
-              </div>
-          </div>
-
-          <div class="form-group row">
               <label for="jenis" class="col-md-4 col-form-label text-md-right">{{ __('Jenis') }}</label>
 
               <div class="col-md-6">

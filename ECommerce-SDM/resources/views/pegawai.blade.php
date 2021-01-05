@@ -90,6 +90,7 @@
                         <td scope="col">Alamat</td>
                         <td scope="col">Divisi</td>
                         <td scope="col">Jabatan</td>
+                        <td scope="col" colspan="2">Operation</td>
                       </tr>
                     </thead>
                     <tbody class="tbody">
@@ -101,6 +102,8 @@
                         <td><?php echo $item['alamat'] ?></td>
                         <td><?php echo $item['divisi'] ?></td>
                         <td><?php echo $item['jabatan'] ?></td>
+                        <td><input type="button" href="" class="btn btn-success" value="Edit"></input></td>
+                        <td><input type="button" name="" class="btn btn-danger" value="Hapus"></td>
                       </tr>
                       @endforeach
                     </tbody>

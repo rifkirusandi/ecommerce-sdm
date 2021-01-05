@@ -48,6 +48,37 @@ class PegawaiController extends Controller
       ], 200);
     }
 
+    public function update(Request $request, $id)
+    {
+        $nama = $request->nama;
+        $umur = $request->umur;
+        $alamat = $request->alamat;
+        $divisi = $request->divisi;
+        $jabatan = $request->jabatan;
+
+        $pegawai = Pegawai::find($id);
+        $pegawai->nama = $nama;
+        $pegawai->umur = $umur;
+        $pegawai->alamat = $alamat;
+        $pegawai->divisi = $divisi;
+        $pegawai->jabatan = $jabatan;
+
+        $pegawai->save();
+
+        return response([
+          'status' => 'OK',
+          'message' => 'Data berhasil diupdate.',
+          'data' => $penggajian
+        ], 200);
+    }
+
+    public function delete($id) {
+        $pengawai = Pegawai::find($id);
+        $pegawai->delete();
+
+        return "Data berhasil di hapus";
+    }
+
     public function list(){
         $data = Http::get('http://divisi-sdm.herokuapp.com/api/pegawai');
         $data = json_decode($data, true);

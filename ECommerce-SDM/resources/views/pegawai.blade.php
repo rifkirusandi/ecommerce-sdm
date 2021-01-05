@@ -102,7 +102,7 @@
                         <td><?php echo $item['alamat'] ?></td>
                         <td><?php echo $item['divisi'] ?></td>
                         <td><?php echo $item['jabatan'] ?></td>
-                        <td><input type="button" href="" class="btn btn-success" value="Edit"></input></td>
+                        <td><a href="/editPegawai/{{$item['id']}}" class="btn btn-success">Edit</a></input></td>
                         <td><a href="/deletePegawai/{{$item['id']}}" class="btn btn-danger">Hapus</a></td>
                       @endforeach
                     </tbody>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Penggajian;
+use App\Pegawai;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;

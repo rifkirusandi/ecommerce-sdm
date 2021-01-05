@@ -78,6 +78,7 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
+                        <td scope="col">ID Transaksi</td>
                         <td scope="col">ID Pegawai</td>
                         <td scope="col">Jam Kerja</td>
                         <td scope="col">Gaji</td>
@@ -89,6 +90,7 @@
                     <tbody class="tbody">
                       @foreach ($data as $item)
                       <tr>
+                        <td><?php echo $item['id'] ?></td>
                         <td><?php echo $item['id_pegawai'] ?></td>
                         <td><?php echo $item['jam_kerja'] ?></td>
                         <td><?php

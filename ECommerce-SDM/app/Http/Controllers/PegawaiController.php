@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use App\Pegawai;
+use DB;
 
 class PegawaiController extends Controller
 {
@@ -50,26 +51,16 @@ class PegawaiController extends Controller
 
     public function update(Request $request, $id)
     {
-        $nama = $request->nama;
-        $umur = $request->umur;
-        $alamat = $request->alamat;
-        $divisi = $request->divisi;
-        $jabatan = $request->jabatan;
+        $nama = $request->input('nama');
+        $umur = $request->input('umur');
+        $alamat = $request->input('alamat');
+        $divisi = $request->input('divisi');
+        $jabatan = $request->input('jabatan');
 
-        $pegawai = Pegawai::find($id);
-        $pegawai->nama = $nama;
-        $pegawai->umur = $umur;
-        $pegawai->alamat = $alamat;
-        $pegawai->divisi = $divisi;
-        $pegawai->jabatan = $jabatan;
+        DB::update('update pegawais set nama = ?, umur = ?, alamat = ?, divisi = ?, jabatan = ? where id = ?'
+        , [$nama, $umur, $alamat, $divisi, $jabatan, $id]);
 
-        $pegawai->save();
-
-        return response([
-          'status' => 'OK',
-          'message' => 'Data berhasil diupdate.',
-          'data' => $penggajian
-        ], 200);
+        return redirect()->route('listPegawai');
     }
 
     public function delete($id) {
@@ -87,6 +78,11 @@ class PegawaiController extends Controller
 
     public function tambah(){
         return view('tambahPegawai');
+    }
+
+    public function edit($id){
+        $data = DB::select('select * from pegawais where id = ?', [$id]);
+        return view('editPegawai', ['data'=>$data]);
     }
 
     public function create1(Request $request){

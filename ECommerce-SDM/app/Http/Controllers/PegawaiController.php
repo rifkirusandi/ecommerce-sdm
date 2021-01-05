@@ -73,7 +73,7 @@ class PegawaiController extends Controller
     }
 
     public function delete($id) {
-        $pengawai = Pegawai::find($id);
+        $pegawai = Pegawai::find($id);
         $pegawai->delete();
 
         return "Data berhasil di hapus";

@@ -76,7 +76,7 @@ class PegawaiController extends Controller
         $pegawai = Pegawai::find($id);
         $pegawai->delete();
 
-        return "Data berhasil di hapus";
+        return redirect()->route('listPegawai');
     }
 
     public function list(){
@@ -103,6 +103,17 @@ class PegawaiController extends Controller
       $request = $client->post($url, [
         'headers'   => ['Content-Type' => 'application/json'],
         'body'      => json_encode($body),
+      ]);
+
+      return redirect()->route('listPegawai');
+    }
+
+    public function hapus($id){
+      $client = new Client();
+      $url = "http://divisi-sdm.herokuapp.com/api/pegawai";
+
+      $request = $client->delete($url, [
+        'headers'   => ['Content-Type' => 'application/json'],
       ]);
 
       return redirect()->route('listPegawai');

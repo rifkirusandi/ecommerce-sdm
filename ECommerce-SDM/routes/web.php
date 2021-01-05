@@ -29,6 +29,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('pegawai', 'PegawaiController@list')->name('listPegawai');
 Route::get('tambahPegawai', 'PegawaiController@tambah');
 Route::post('insertPegawai', 'PegawaiController@create1')->name('createPegawai');
+Route::get('/deletePegawai/{id}', 'PegawaiController@delete');
 
 // Penggajian //
 Route::get('penggajian', 'PenggajianController@list')->name('listPenggajian');

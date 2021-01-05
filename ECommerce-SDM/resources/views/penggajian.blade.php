@@ -83,6 +83,7 @@
                         <td scope="col">Gaji</td>
                         <td scope="col">Status</td>
                         <td scope="col">Tanggal</td>
+                        <td scope="col" colspan="2">Operation</td>
                       </tr>
                     </thead>
                     <tbody class="tbody">
@@ -95,6 +96,8 @@
                         echo $item['gaji'] ?></td>
                         <td><?php echo $item['status'] ?></td>
                         <td><?php echo $item['tanggal'] ?></td>
+                        <td><input type="button" href="" class="btn btn-success" value="Edit"></input></td>
+                        <td><a href="/deletePenggajian/{{$item['id']}}" class="btn btn-danger">Hapus</a></td>
                       </tr>
                       @endforeach
                     </tbody>

@@ -35,6 +35,7 @@ Route::get('/deletePegawai/{id}', 'PegawaiController@delete');
 Route::get('penggajian', 'PenggajianController@list')->name('listPenggajian');
 Route::get('tambahPenggajian', 'PenggajianController@tambah');
 Route::post('insertPenggajian', 'PenggajianController@create1')->name('createPenggajian');
+Route::get('/deletePenggajian/{id}', 'PenggajianController@delete');
 
 // Absensi //
 Route::get('absensi', 'AbsensiController@list');

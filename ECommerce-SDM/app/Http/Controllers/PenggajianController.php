@@ -128,7 +128,7 @@ class PenggajianController extends Controller
         $penggajian = Penggajian::find($id);
         $penggajian->delete();
 
-        return "Data berhasil di hapus";
+        return redirect()->route('listPenggajian');
     }
 
     /**

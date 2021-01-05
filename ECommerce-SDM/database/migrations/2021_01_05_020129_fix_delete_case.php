@@ -14,8 +14,8 @@ class FixDeleteCase extends Migration
     public function up()
     {
       Schema::table('penggajians', function (Blueprint $table) {
-          $table->dropForeign('id_pegawai');
-          
+          $table->dropForeign(['id_pegawai']);
+
           $table->foreign('id_pegawai')->references('id')->on('pegawais')->onDelete('cascade');
       });
     }

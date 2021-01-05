@@ -14,6 +14,8 @@ class FixDeleteCase1 extends Migration
     public function up()
     {
       Schema::table('absensi', function (Blueprint $table) {
+          $table->dropForeign('id_pegawai');
+
           $table->foreign('id_pegawai')->references('id')->on('pegawais')->onDelete('cascade');
       });
     }
